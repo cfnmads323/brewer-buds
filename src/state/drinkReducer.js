@@ -1,7 +1,7 @@
 export const initialDrink = {
     cup: null,
     base: null,
-    milk = "none",
+    milk: "none",
     syrups: [],
     toppings: null,
 };

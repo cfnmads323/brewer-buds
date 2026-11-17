@@ -100,7 +100,12 @@ export default function BuilderCard({ drink, dispatch, onBrew }) {
           {visible.map((o) => {
             const selected = isSelected(tabId, o.id, drink);
             return (
-              <button>
+              <button
+                key={o.id}
+                className="thumb"
+                aria-pressed={selected}
+                onClick={() => dispatch({ type: ACTIONS[tabId], id: o.id })}
+              >
                 {o.img ? (
                   <img src={o.img} alt="" />
                 ) : (
@@ -111,7 +116,35 @@ export default function BuilderCard({ drink, dispatch, onBrew }) {
             );
           })}
         </div>
+
+        <button
+          className="arrow"
+          aria-label="Next options"
+          disabled={page >= pageCount - 1}
+          onClick={() => setPage(page + 1)}
+        >
+          ‹
+        </button>
       </div>
+
+      <footer className="builder-card__actions">
+        <button className="reset" onClick={() => dispatch({ type: "RESET" })}>
+          Start Over
+        </button>
+        <button
+          className="brew"
+          disabled={!canBrew}
+          onClick={onBrew}
+          aria-describedby={canBrew ? undefined : "brew-hint"}
+        >
+          Brew!
+        </button>
+      </footer>
+      {!canBrew && (
+        <p id="brew-hint" className="hint">
+          Pick a cup and a base to brew.
+        </p>
+      )}
     </section>
   );
 }
