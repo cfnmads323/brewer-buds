@@ -25,11 +25,11 @@ export const milks = [
 ];
 
 export const syrups = [
-    { id: "vanilla", label: "Vanilla", color: "#3F1D0E" },
-    { id: "chocolate", label: "Chocolate", color: "#A2663C" },
-    { id: "caramel", label: "Caramel", color: "#ABBF9B" },
-    { id: "lavender", label: "lavender", color: "#A2663C" },
-    { id: "strawberry", label: "strawberry", color: "#ABBF9B" },
+    { id: "vanilla", label: "Vanilla", color: "#F2DFA4" },
+    { id: "chocolate", label: "Chocolate", color: "#361c0a" },
+    { id: "caramel", label: "Caramel", color: "#83530a" },
+    { id: "lavender", label: "Lavender", color: "#d08cf0" },
+    { id: "strawberry", label: "Strawberry", color: "#e03b25" },
 ];
 
 export const toppings = [
