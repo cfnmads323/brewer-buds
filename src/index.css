@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap");
+
+/* Raw Palette */
+:root {
+  --milk: #e6e2d7;
+  --cream: #e4cdb0;
+  --caramel: #a2663c;
+  --coffee: #3f1d0e;
+  --matcha: #abbf9b;
+}
+
+/* Light Theme */
+:root {
+  color-scheme: light;
+
+  --surface: var(--milk); /* page background, panels, tabs, buttons */
+  --card: var(--cream); /* card backgrounds */
+  --line: var(--caramel); /* borders and accents */
+  --ink: var(--coffee); /* text and outlines */
+  --selected: var(--matcha); /* selected tabs, Brew!, active navigate link */
+  --paper: #fffdf7; /* text inputs */
+
+  --text: #6b5143;
+  --text-h: #3f1d0e;
+  --bg: var(--surface);
+  --border: #d6be9c;
+  --code-bg: #f3efe6;
+  --accent: var(--caramel);
+  --accent-bg: rgba(162, 102, 60, 0.1);
+  --accent-border: rgba(162, 102, 60, 0.5);
+  --social-bg: rgba(228,205,176, 0.5);
+  --shadow:
+    rgba(63, 29, 14, 0.12) 0 10px 15px -3px, rgba(63, 29, 14, 0.06) 0 4px 6px -2px;
+
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --surface: #241109; /* page background, panels, tabs, buttons */
+  --card: #3f1d0e; /* card backgrounds */
+  --line: #c98a5b; /* borders and accents */
+  --ink: #f1e6d6; /* text and outlines */
+  --selected: #4d6343; /* selected tabs, Brew!, active navigate link */
+  --paper: #33190d; /* text inputs */
+
+  --text: #d9c7b3;
+  --text-h: #f1e6d6;
+  --border: ##5a3a28;
+  --code-bg: #2f180d;
+  --accent-bg: rgba(201, 138, 91, 0.12);
+  --accent-border: rgba(201, 138, 91, 0.5);
+  --social-bg: rgba(63, 29, 14, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.45) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+}
+
+/* Element shadings */
+:root {
+  --stage: #e6e2d7;
+  --stage-ink: #3f1d0e;
+  --stage-line: #a2663c;
+  --stage-paper: #fffdf7;
+  --thumb-bg: #f3efe6;
+  --thumb-selected: #abbf9b;
+}
+
+/* Fonts */
+:root {
+  --font-display: "Playfair Display", serif;
+  --font-ui: "Outfit". system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+}
+
